@@ -1,0 +1,68 @@
+<?php
+/**
+ * @var \Phalcon\Mvc\View\Engine\Php $this
+ */
+?>
+
+<div class="row">
+    <nav>
+        <ul class="pager">
+            <li class="previous"><?php echo $this->tag->linkTo(["cis_user", "Go Back"]) ?></li>
+        </ul>
+    </nav>
+</div>
+
+<div class="page-header">
+    <h1>
+        Create cis_user
+    </h1>
+</div>
+
+<?php echo $this->getContent(); ?>
+
+<?php
+    echo $this->tag->form(
+        [
+            "cis_user/create",
+            "autocomplete" => "off",
+            "class" => "form-horizontal"
+        ]
+    );
+?>
+
+<div class="form-group">
+    <label for="fieldUname" class="col-sm-2 control-label">Uname</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["uname", "size" => 30, "class" => "form-control", "id" => "fieldUname"]) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldPasswd" class="col-sm-2 control-label">Passwd</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["passwd", "size" => 30, "class" => "form-control", "id" => "fieldPasswd"]) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldOpenid" class="col-sm-2 control-label">Openid</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["openid", "size" => 30, "class" => "form-control", "id" => "fieldOpenid"]) ?>
+    </div>
+</div>
+
+<div class="form-group">
+    <label for="fieldFrom" class="col-sm-2 control-label">From</label>
+    <div class="col-sm-10">
+        <?php echo $this->tag->textField(["from", "size" => 30, "class" => "form-control", "id" => "fieldFrom"]) ?>
+    </div>
+</div>
+
+
+<div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+        <?php echo $this->tag->submitButton(["Save", "class" => "btn btn-default"]) ?>
+    </div>
+</div>
+
+<?php echo $this->tag->endForm(); ?>

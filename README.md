@@ -1,2 +1,2 @@
-# Wechat
-微信公众号开发
+# wechat
+微信公众号程序开发，基于Phalcon框架
