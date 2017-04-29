@@ -3,7 +3,7 @@
  * Name: wechat-Qrcode.php
  * CreateDateTime: 2017/4/28 10:08
  * Author: Chison
- * Describe: 带参数的临时二维码
+ * Describe: 生成微信二维码
  */
 
 namespace Chison\Wechat\Qrcode;
@@ -15,7 +15,7 @@ use Chison\Wechat\Tools\Http;
 class Qrcode extends Base
 {
     /**
-     * @var string 临时二维码请求URL地址
+     * @var string 二维码请求URL地址
      */
     private $qrcodeUrl = 'https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token=';
 
@@ -42,9 +42,12 @@ class Qrcode extends Base
      * @return Array(
      * [ticket] => 'ticket' //获取的二维码ticket，凭借此ticket可以在有效时间内换取二维码。
      * [expire_seconds] => 604800 //该二维码有效时间，以秒为单位。 最大不超过2592000（即30天）。
-     * [url] => http://weixin.qq.com/q/02bg2R4HjkbmO15nudNp1L
      * //二维码图片解析后的地址，开发者可根据该地址自行生成需要的二维码图片
+     * [url] => http://weixin.qq.com/q/02bg2R4HjkbmO15nudNp1L
      * )
+     * 使用：
+     * 通过ticket直接换取二维码
+     * https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=you get ticket
      */
     public function createTmpQrcode(){
         //echo json_encode($this->jsonArray);

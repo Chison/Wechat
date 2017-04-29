@@ -128,6 +128,10 @@ class Http
         return $this;
     }
 
+    /**
+     * 返回结果json转化数组
+     * @return mixed
+     */
     public function jsonToArrayResponse(){
         return json_decode($this->response , true);
     }
