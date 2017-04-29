@@ -8,8 +8,7 @@
 
 namespace Chison\Wechat\Statistics;
 
-
-class InterfaceAnalysis
+class InterfaceAnalysis extends BaseAnalysis
 {
     /**
      * @var array 接口分析数据

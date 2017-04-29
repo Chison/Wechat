@@ -8,8 +8,6 @@
 
 namespace Chison\Wechat\Statistics;
 
-use Chison\Wechat\Tools\Http;
-
 class PicAnalysis extends BaseAnalysis
 {
     /**

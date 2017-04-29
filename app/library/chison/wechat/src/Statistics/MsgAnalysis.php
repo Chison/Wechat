@@ -8,8 +8,7 @@
 
 namespace Chison\Wechat\Statistics;
 
-
-class MsgAnalysis
+class MsgAnalysis extends BaseAnalysis
 {
     /**
      * @var array 消息发送概况数据

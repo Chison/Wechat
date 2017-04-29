@@ -8,8 +8,8 @@
 
 namespace Chison\Wechat\Statistics;
 
-
 use Chison\Wechat\Base;
+use Chison\Wechat\Tools\Http;
 
 class BaseAnalysis extends Base
 {
