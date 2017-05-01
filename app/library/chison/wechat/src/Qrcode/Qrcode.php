@@ -49,7 +49,7 @@ class Qrcode extends Base
      * 通过ticket直接换取二维码
      * https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=you get ticket
      */
-    public function createTmpQrcode(){
+    public function createQrcode(){
         //echo json_encode($this->jsonArray);
         return Http::start($this->qrcodeUrl . $this->token , 'post')
             ->setData(json_encode($this->jsonArray))

@@ -8,6 +8,7 @@
 
 namespace Chison\Wechat\Response;
 use Chison\Wechat\CInterface\ReceiveMsgInterface;
+use Chison\Wechat\Msg\ReceiveEventMsg;
 use Chison\Wechat\Msg\ReceiveMsg;
 class XmlResponse
 {
@@ -42,7 +43,15 @@ class XmlResponse
      */
     protected $msgType;
 
+    /**
+     * @var ReceiveMsgInterface 存放接受消息对象
+     */
     protected $ReceiveMsg;
+
+    /**
+     * @var ReceiveEventMsgInterface 事件对象
+     */
+    protected $EventMsg;
 
     /**
      * XmlResponse constructor.
@@ -51,6 +60,8 @@ class XmlResponse
      */
     public function __construct($receive = '')
     {
+        $this->EventMsg = new ReceiveEventMsg();
+
         //默认对象
         if($receive == ''){
             $this->ReceiveMsg = new ReceiveMsg();
@@ -86,7 +97,14 @@ class XmlResponse
         if(empty($this->msgType)) return 'fail';
 
         if($this->msgType == 'event'){
-            $xml = '';
+            //接受到微信的事件信息, eg: 用户允许上报地理位置, 每次进入微信公众号会提交LOCATION事件
+            $funcName = strtolower($this->msgType);
+            $xml = XmlParser::arrayToXml(
+                $this->EventMsg->$funcName()
+            );
+
+            //成功
+            $xml = 'success';
         }else{
             $funcName = strtolower($this->msgType) . 'Msg';
             $xml = XmlParser::arrayToXml(
