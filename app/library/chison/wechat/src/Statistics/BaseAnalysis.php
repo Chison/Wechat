@@ -45,7 +45,7 @@ class BaseAnalysis extends Base
      */
     public function analysis(string $type){
         if(!property_exists($this , $type) && isset($this->$type['url'])){
-            throw new \Exception('无效的图文分析方法');
+            throw new \Exception('无效的分析方法');
         }
         $this->isValidDate($this->$type['max']);
         return Http::start($this->$type['url'] . $this->token , 'post')
