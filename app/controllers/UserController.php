@@ -21,8 +21,9 @@ class UserController extends \Phalcon\Mvc\Controller
 
         $tokenKey = $this->session->get('$PHALCON/CSRF/KEY$');
         $tokenValue = $this->session->get('$PHALCON/CSRF$');
+
         //伪请求
-        if (!$this->security->checkToken($tokenKey , $tokenValue)) {
+        if (is_null($tokenValue) || is_null($tokenKey) || !$this->security->checkToken($tokenKey , $tokenValue)) {
             $this->response->setContent('不支持跨站登录');
             $this->response->send();
             return ;
@@ -40,6 +41,7 @@ class UserController extends \Phalcon\Mvc\Controller
             $login = new CisLogin();
             $login->setUid($user->id);
             $login->setLoginTime(time());
+            $login->setIp($this->request->getClientAddress());
             $login->save();
             //提示
             $this->response->setContent('登录成功');

@@ -7,6 +7,7 @@
  */
 
 namespace Chison\Wechat\Response;
+use Chison\Wechat\CInterface\ReceiveEventMsgInterface;
 use Chison\Wechat\CInterface\ReceiveMsgInterface;
 use Chison\Wechat\Msg\ReceiveEventMsg;
 use Chison\Wechat\Msg\ReceiveMsg;

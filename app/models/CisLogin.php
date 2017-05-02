@@ -17,14 +17,21 @@ class CisLogin extends \Phalcon\Mvc\Model
      * @var integer
      * @Column(type="integer", length=11, nullable=false)
      */
-    protected $uid;
+    protected $loginTime;
 
     /**
      *
      * @var integer
      * @Column(type="integer", length=11, nullable=false)
      */
-    protected $loginTime;
+    protected $uid;
+
+    /**
+     *
+     * @var string
+     * @Column(type="string", length=50, nullable=false)
+     */
+    protected $ip;
 
     /**
      * Method to set the value of field Id
@@ -35,19 +42,6 @@ class CisLogin extends \Phalcon\Mvc\Model
     public function setId($Id)
     {
         $this->Id = $Id;
-
-        return $this;
-    }
-
-    /**
-     * Method to set the value of field uid
-     *
-     * @param integer $uid
-     * @return $this
-     */
-    public function setUid($uid)
-    {
-        $this->uid = $uid;
 
         return $this;
     }
@@ -66,6 +60,32 @@ class CisLogin extends \Phalcon\Mvc\Model
     }
 
     /**
+     * Method to set the value of field uid
+     *
+     * @param integer $uid
+     * @return $this
+     */
+    public function setUid($uid)
+    {
+        $this->uid = $uid;
+
+        return $this;
+    }
+
+    /**
+     * Method to set the value of field ip
+     *
+     * @param string $ip
+     * @return $this
+     */
+    public function setIp($ip)
+    {
+        $this->ip = $ip;
+
+        return $this;
+    }
+
+    /**
      * Returns the value of field Id
      *
      * @return integer
@@ -73,6 +93,16 @@ class CisLogin extends \Phalcon\Mvc\Model
     public function getId()
     {
         return $this->Id;
+    }
+
+    /**
+     * Returns the value of field loginTime
+     *
+     * @return integer
+     */
+    public function getLoginTime()
+    {
+        return $this->loginTime;
     }
 
     /**
@@ -86,13 +116,13 @@ class CisLogin extends \Phalcon\Mvc\Model
     }
 
     /**
-     * Returns the value of field loginTime
+     * Returns the value of field ip
      *
-     * @return integer
+     * @return string
      */
-    public function getLoginTime()
+    public function getIp()
     {
-        return $this->loginTime;
+        return $this->ip;
     }
 
     /**

@@ -15,7 +15,7 @@
                    value="<?php echo $this->security->getToken() ?>"/>
             <button type="submit" name="Submit" class="btn btn-primary form-control" value="Submit">登录</button>
         </form>
-        <p class="text-right register"><a>免费注册</a></p>
+        <p class="text-right register"><a></a></p>
     </div>
 {% endblock %}
 {% block myjs %}

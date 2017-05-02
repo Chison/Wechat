@@ -1,5 +1,5 @@
 <?php
-
+//mysql cache model
 class CisCache extends \Phalcon\Mvc\Model
 {
 
@@ -68,7 +68,6 @@ class CisCache extends \Phalcon\Mvc\Model
     public function setValue($value)
     {
         $this->value = $value;
-
         return $this;
     }
 
