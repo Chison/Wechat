@@ -16,10 +16,9 @@
     "require": {
         "php": ">=7.0.0",
         "ext-seaslog": "*",
-        "ext-redis": "*"
-    },
-    "require-dev": {
-        "rmccue/requests": "^1.7"
+        "ext-redis": "*",
+        "rmccue/requests": "^1.7",
+        "predis/predis" : "~1.0"
     },
     "autoload": {
         "classmap": [
