@@ -1,10 +1,27 @@
 {
-  "require": {
-    "rmccue/requests": "^1.7"
-  },
-  "autoload": {
-    "psr-4": {
-      "Foo\\": "src/"
+    "name": "chison/wechat",
+    "description": "微信公众号API.",
+    "keywords": ["微信公众号API", "wechat"],
+    "license": "MIT",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Chison",
+            "email": "chisonshe@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "ext-seaslog": "*",
+        "ext-redis": "*"
+    },
+    "require-dev": {
+        "rmccue/requests": "^1.7"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
     }
-  }
 }
+

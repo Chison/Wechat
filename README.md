@@ -1,2 +1,3 @@
-# wechat
-微信公众号程序开发，基于Phalcon框架
+## License
+
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
