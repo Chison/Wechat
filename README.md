@@ -1,13 +1,5 @@
 # Chison/Wechat #
 
-[![Software license][ico-license]](LICENSE)
-[![Latest stable][ico-version-stable]][link-packagist]
-[![Latest development][ico-version-dev]][link-packagist]
-[![Monthly installs][ico-downloads-monthly]][link-downloads]
-[![Build status][ico-travis]][link-travis]
-[![HHVM support][ico-hhvm]][link-hhvm]
-[![Gitter room][ico-gitter]][link-gitter]
-
 > 1、composer.json 文件配置
 
 ```json
@@ -34,7 +26,7 @@ return [
     'publicName'=>  'your publicName'
 ];
 ```
-> 2、 设置
+> 2、 设置 /public/index.php
 ```php
 use \Chison\Wechat\Engine;
 
