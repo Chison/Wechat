@@ -18,8 +18,6 @@ class Base
 
     protected $http;
 
-
-
     /**
      * Base constructor.
      */

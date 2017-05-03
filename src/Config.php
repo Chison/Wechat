@@ -29,22 +29,16 @@ trait Config
      */
     protected $jsticket;
 
-
-    /**
-     * @var Object 外部注入的缓存对象
-     */
-    protected $cache;
-
     /**
      * 配置设置
      */
     public function settingConfig()
     {
-        $this->appid = Engine::$config->appid;
-        $this->appsercet = Engine::$config->appsercet;
-        $this->ctoken = Engine::$config->token;
-        $this->encodeKey = base64_decode(Engine::$config->encodeKey . "=");
-        $this->publicName = Engine::$config->publicName;
+        $this->appid = Engine::$config['appid'];
+        $this->appsercet = Engine::$config['appsercet'];
+        $this->ctoken = Engine::$config['token'];
+        $this->encodeKey = base64_decode(Engine::$config['encodeKey'] . "=");
+        $this->publicName = Engine::$config['publicName'];
         $ticket = Tickets::getInstance($this->appid , $this->appsercet , Engine::$cache);
         $this->token = $ticket->getAccessToken();
         $this->jsticket = $ticket->getJsTicket();

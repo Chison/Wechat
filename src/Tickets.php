@@ -64,7 +64,7 @@ class Tickets
             ->send()
             ->jsonToArrayResponse();
         $this->checkException($data , __METHOD__);
-        $this->cache->save(
+        $this->cache->set(
             $this->getTokenKey(),
             $data['access_token']
         );
@@ -86,7 +86,7 @@ class Tickets
             ->send()
             ->jsonToArrayResponse();
         //$this->checkException($data , __METHOD__);
-        $this->cache->save(
+        $this->cache->set(
             $this->getJsTicketKey(),
             $data['ticket']
         );
