@@ -39,5 +39,4 @@ Engine::$config = include '../config/config.php';
 Engine::$cache = new Predis\Client('tcp://redis.cis:6379?password=your password');
 ```
 
-
-
+> [更多说明](https://github.com/Chison/Wechat/wiki)
