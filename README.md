@@ -1,9 +1,9 @@
 # Chison/Wechat #
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/chison/wechat)
 [![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/chison/wechat)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/chison/wechat)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/chison/wechat)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/chison/wechat)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/chison/wechat)>
+
+> 代码阶段(2017-5-8)：目前处于功能开发中。
 
 > 1、composer.json 文件配置
 
