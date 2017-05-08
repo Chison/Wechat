@@ -53,5 +53,10 @@ trait Config
         return $this;
     }
 
-
+    /**
+     * @return string
+     */
+    public function getToken(){
+        return $this->token;
+    }
 }
